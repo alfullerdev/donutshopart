@@ -1,2 +1,10 @@
-export {default as Navbar} from './Navbar/Navbar';
-export {default as Products } from './Products/Products';
+export { default as Navbar } from './Navbar/Navbar';
+export { default as Products } from './Products/Products';
+export { default as Item } from './Products/Item';
+export { default as Cart } from './Cart/Cart';
+export { default as Checkout } from './CheckoutForm/Checkout/Checkout';
+export { default as About } from './pages/About';
+export { default as Contact } from './pages/Contact';
+export { default as Policy } from './pages/Policy';
+export { default as Terms } from './pages/Terms';
+export { default as Footer } from './Footer/Footer';

@@ -5,9 +5,17 @@ export default makeStyles((theme) => ({
   content: {
     flexGrow: 1,
     backgroundColor: theme.palette.background.default,
-    padding: theme.spacing(3),
+    padding: theme.spacing(4),
   },
   root: {
     flexGrow: 1,
   },
+  title: {
+    fontFamily:'Source Sans Pro',
+    fontSize:'2rem'
+  },
+  body: {
+    fontFamily:'Source Sans Pro',
+    fontSize:'1rem'
+  }
 }));

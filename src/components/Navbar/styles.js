@@ -12,10 +12,30 @@ export default makeStyles((theme) => ({
     },
   },
   title: {
+    flexGrow: 0,
+    alignItems: 'center',
+    display: 'flex',
+    textDecoration: 'none',
+    fontFamily:'Source Sans Pro',
+    fontSize:'15px',
+    padding:'5px'
+  },
+
+  appLogo: {
     flexGrow: 1,
     alignItems: 'center',
     display: 'flex',
     textDecoration: 'none',
+    fontFamily:'Source Sans Pro',
+    fontSize:'15px'
+  },
+  logo:{
+      maxWidth:'90px',
+      padding:'5px',
+      textAlign:'center'
+  },
+  bak:{
+    backgroundColor:'red',
   },
   image: {
     marginRight: '10px',
