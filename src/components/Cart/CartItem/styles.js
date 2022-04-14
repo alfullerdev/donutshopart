@@ -20,7 +20,7 @@ export default makeStyles(() => ({
     boxShadow: "none"
   },
   description: {
-    fontSize:'14px',
+    fontSize:'12px',
     fontFamily:'Source Sans Pro',
     paddingBottom:'20px'
   },

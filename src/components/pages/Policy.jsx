@@ -1,8 +1,14 @@
 import React from 'react';
+import useStyles from './styles';
+import { Grid } from '@material-ui/core';
 
 const Policy = () => {
-  return <div style={{marginLeft:'50px',marginRight:'50px', marginBottom:'150px', marginTop:'150px', textAlign:'justify', fontFamily:'Source Sans Pro', fontSize:'15px'}}><h4>Privacy Policy</h4>
- 
+
+  const classes = useStyles();
+
+  return <>
+  <Grid container justifyContent={"center"} >
+  <Grid xs={11} style={{marginBottom:'150px', marginTop:'150px', textAlign:'justify', fontFamily:'Source Sans Pro', fontSize:'15px'}}>
   Last updated: January 30, 2022
 
   <br/><br/>
@@ -162,7 +168,11 @@ const Policy = () => {
   <br/>
   By email: <a href={"mailto:support@amberfullerdesigner.com"}>support@amberfullerdesigner.com</a>
   <br/>
-  Privacy Policy for The Donut Shop</div>;
+  Privacy Policy for The Donut Shop
+
+  </Grid>
+  </Grid>
+  </>
 };
 
 export default Policy;

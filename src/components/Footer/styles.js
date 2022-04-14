@@ -24,11 +24,9 @@ export default makeStyles((theme) => ({
     fontSize:'15px',
     padding:'5px',
     color:'black',
-
+    textAlign:'center',
     [theme.breakpoints.down('xs')]: {
-      fontSize:'12px'
-
+      fontSize:'10px'
     },
-
   }
 }));

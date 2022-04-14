@@ -13,10 +13,10 @@ const CartItem = ({ item, onUpdateCartQty, onRemoveFromCart }) => {
   return (
     <>
     <Card square={true} className={classes.custom}>
-      <CardMedia component="img" image={item.image.url}  alt={item.name} className={classes.media} />
+      <CardMedia component="img" image={item.image.url} alt={item.name} className={classes.media} />
       <CardContent className={classes.cardContent}>
-        <Typography >{item.name}</Typography>
-        <Typography >{item.line_total.formatted_with_symbol}</Typography>
+       <div>{item.name}<br/><br/>
+       {item.line_total.formatted_with_symbol}</div>
         <div className={classes.description} style={{textAlign:'justify'}} dangerouslySetInnerHTML={{ __html:item.description}} ></div>
       </CardContent>
       <CardActions className={classes.cardActions}>

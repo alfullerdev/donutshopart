@@ -22,13 +22,15 @@ const Footer = () => {
     return <>
         <footer className={classes.footer_styles}>
         <Grid  justifyContent={"center"} container >
-            <Grid xs={8} item className={classes.footer_text}>
-                <span className={classes.copyright}>Copyright&copy; {currentYear} </span>
-                <span>Amber Fuller Designer</span>. All rights reserved.
+            <Grid xs={12} sm={6} item className={classes.footer_text}>
+                Copyright&copy; {currentYear} Amber Fuller Designer. All rights reserved.
+            </Grid>
+            <Grid xs={12} sm={6} item className={classes.footer_text}>
+            <Grid xs={2}component={Link} to="/terms"  onMouseOver={hoverButton} onMouseOut={leaveButton} item className={classes.footer_text} > Terms</Grid>
+            <Grid xs={2} sm={1} component={Link} to="/policy" onMouseOver={hoverButton} onMouseOut={leaveButton} item className={classes.footer_text} >Privacy Policy</Grid>
             </Grid>
 
-            <Grid xs={1}component={Link} to="/terms"  onMouseOver={hoverButton} onMouseOut={leaveButton} item className={classes.footer_text} > Terms</Grid>
-            <Grid xs={2} sm={1} component={Link} to="/policy" onMouseOver={hoverButton} onMouseOut={leaveButton} item className={classes.footer_text} >Privacy Policy</Grid>
+          
         </Grid>
         </footer>
     </>
