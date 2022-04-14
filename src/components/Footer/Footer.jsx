@@ -8,13 +8,29 @@ import { Grid } from '@material-ui/core';
 import useStyles from './styles';
 
 const Footer = () => {
+    const classes     = useStyles();
+    const currentYear = new Date().getFullYear();
 
-  return <>
-<footer style={{color: "gray", position: "fixed", bottom: 0, backgroundColor:"white"}}>
-<Grid container>
-    1
-</Grid>
-</footer>
+    function hoverButton(e) {
+        e.target.style.color = '#ccc';
+    }
+
+    function leaveButton(e) {
+        e.target.style.color = 'black';
+    }
+
+    return <>
+        <footer className={classes.footer_styles}>
+        <Grid  justifyContent={"center"} container >
+            <Grid xs={8} item className={classes.footer_text}>
+                <span className={classes.copyright}>Copyright&copy; {currentYear} </span>
+                <span>Amber Fuller Designer</span>. All rights reserved.
+            </Grid>
+
+            <Grid xs={1}component={Link} to="/terms"  onMouseOver={hoverButton} onMouseOut={leaveButton} item className={classes.footer_text} > Terms</Grid>
+            <Grid xs={2} sm={1} component={Link} to="/policy" onMouseOver={hoverButton} onMouseOut={leaveButton} item className={classes.footer_text} >Privacy Policy</Grid>
+        </Grid>
+        </footer>
     </>
 };
 

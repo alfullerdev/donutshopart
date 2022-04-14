@@ -10,14 +10,13 @@ const Products = ({ products, onAddToCart }) => {
     return (
         <main>
             <div className={classes.toolbar} />
-            <Grid justifyContent={"center"} style={{padding:"50px"}} container>
+            <Grid justifyContent={"center"} style={{padding:"50px", paddingBottom:'150px'}} container>
                 {products.map((product) => (
                     <Grid key={product.id} item xs={12} sm={6} md={6} lg={4}>
                         <Product product={product}  onAddToCart={onAddToCart} />
                     </Grid>
                 ))}
             </Grid>
-        
         </main> 
     );
 };

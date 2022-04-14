@@ -1,9 +1,9 @@
 import React from 'react';
 
 const Policy = () => {
-  return <div><h4>Privacy Policy</h4>
+  return <div style={{marginLeft:'50px',marginRight:'50px', marginBottom:'150px', marginTop:'150px', textAlign:'justify', fontFamily:'Source Sans Pro', fontSize:'15px'}}><h4>Privacy Policy</h4>
  
-  Last updated: January 30, 2021
+  Last updated: January 30, 2022
 
   <br/><br/>
   
@@ -11,13 +11,13 @@ const Policy = () => {
   <br/>
   We use Your Personal data to provide and improve the Service. By using the Service, You agree to the collection and use of information in accordance with this Privacy Policy. This Privacy Policy has been created with the help of the Privacy Policy Generator.
   <br/><br/>
-  Interpretation and Definitions
+  <h4>Interpretation and Definitions</h4>
   <br/><br/>
   Interpretation
   <br/>
   The words of which the initial letter is capitalized have meanings defined under the following conditions. The following definitions shall have the same meaning regardless of whether they appear in singular or in plural.
   <br/><br/>
-  Definitions
+  <b>Definitions</b>
   <br/><br/>
   For the purposes of this Privacy Policy:
   <br/>
@@ -35,9 +35,9 @@ const Policy = () => {
   You means the individual accessing or using the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service, as applicable.
   Collecting and Using Your Personal Data
   <br/><br/>
-  Types of Data Collected
+  <h4>Types of Data Collected</h4>
   <br/><br/>
-  Personal Data
+  <b>Personal Data</b>
   <br/><br/>
   While using Our Service, We may ask You to provide Us with certain personally identifiable information that can be used to contact or identify You. Personally identifiable information may include, but is not limited to:
   <br/><br/>

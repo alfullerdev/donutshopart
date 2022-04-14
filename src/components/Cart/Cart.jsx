@@ -8,36 +8,39 @@ import useStyles from './styles';
 const Cart = ({ cart, onUpdateCartQty, onRemoveFromCart, onEmptyCart }) => {
   const classes = useStyles();
   const handleEmptyCart = () => onEmptyCart();
+  
   const renderEmptyCart = () => (
-    <Typography variant="subtitle1" className={classes.emptyCart}>You have no items in your shopping cart,
-      <Link className={classes.link} to="/">start adding some</Link>!
+    <Typography variant="subtitle1" className={classes.emptyCart}>You have no items in your shopping cart
     </Typography>
   );
   if (!cart.line_items) return 'Loading';
-
+  
   const renderCart = () => (
     <>
-      <Grid container>
-        <Grid item xs={12} md={8}>
+      <Grid container justifyContent={"center"} style={{paddingBottom:'150px'}}>
+      <Grid item justifyContent={"center"} xs={12}>
+        <Grid><span className={classes.cartTotal}>Items in cart</span></Grid>
+      </Grid>
+        <Grid item xs={7} sm={5} lg={4}>
           {cart.line_items.map((lineItem) => (
-              <Grid item xs={12} key={lineItem.id}>
+              <Grid xs={10} item key={lineItem.id}>
                 <CartItem item={lineItem} onUpdateCartQty={onUpdateCartQty} onRemoveFromCart={onRemoveFromCart} />
               </Grid>
           ))}
         </Grid>
-        <Grid item xs={12} md={4} >
-          <Typography variant="h4">Subtotal: {cart.subtotal.formatted_with_symbol}</Typography>
-          <Button className={classes.emptyButton} size="large" type="button" variant="contained" color="secondary" onClick={handleEmptyCart}>Empty cart</Button>
-            <Button className={classes.checkoutButton} component={Link} to="/checkout" size="large" type="button" variant="contained" color="primary">Checkout</Button>
-        </Grid>
-      </Grid>
+        <Grid item xs={5}>
+          <div className={classes.subtotalButton}>Subtotal: {cart.subtotal.formatted_with_symbol}</div>
+          <Button className={classes.emptyButton} variant="outlined" type="button" onClick={handleEmptyCart}>Empty cart</Button>
+          <Button className={classes.checkoutButton} component={Link} variant="outlined" to="/checkout"  type="button" >Checkout</Button>
+          </Grid>
+          </Grid>
     </>
   );
 
   return (
     <Container>
       <div className={classes.toolbar} />
-      <Typography className={classes.title} variant="h3" gutterBottom>Your Shopping Cart</Typography>
+      <Typography className={classes.title} variant="h3" gutterBottom></Typography>
       { !cart.line_items.length ? renderEmptyCart() : renderCart() }
     </Container>
   );

@@ -17,5 +17,15 @@ export default makeStyles((theme) => ({
   body: {
     fontFamily:'Source Sans Pro',
     fontSize:'1rem'
+  },
+  description: {
+    fontSize:'14px',
+    fontFamily:'Source Sans Pro',
+    paddingBottom:'20px'
+  },
+  price: {
+    fontSize:'20px',
+    fontWeight:'800',
+    fontFamily:'Source Sans Pro'
   }
 }));

@@ -2,7 +2,7 @@ import { makeStyles } from '@material-ui/core/styles';
 
 export default makeStyles(() => ({
   media: {
-    height: 260,
+  
   },
   cardContent: {
     display: 'flex',
@@ -18,5 +18,10 @@ export default makeStyles(() => ({
   custom: {
     border: "none",
     boxShadow: "none"
-  }
+  },
+  description: {
+    fontSize:'14px',
+    fontFamily:'Source Sans Pro',
+    paddingBottom:'20px'
+  },
 }));

@@ -13,7 +13,7 @@ export default function About() {
           align="center"
           justify="center"
           direction="row"
-          style={{ height:'100%', paddingTop:'150px' }}
+          style={{ height:'100%', paddingTop:'150px', paddingBottom:'150px' }}
         >
           <Grid item xs={1}></Grid>
           <Grid item xs={12} md={3}><img src={Selfie} className="selfieSm" alt="amberphoto" style={{width:'70%'}} /></Grid>

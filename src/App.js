@@ -6,9 +6,6 @@ import { Navbar, Footer, Products, Cart, Checkout, Item, About, Terms, Contact, 
 import { BottomNavigation } from '@mui/material';
 import { commerce } from './lib/commerce';
 
-
-
-
 const App = () => {
     const [mobileOpen, setMobileOpen] = React.useState(false);
     const [products, setProducts] = useState([]);
@@ -17,8 +14,15 @@ const App = () => {
     const [errorMessage, setErrorMessage] = useState('');
   
     const fetchProducts = async () => {
-      const { data } = await commerce.products.list();
-  
+
+
+
+      const { data } = await commerce.products.list({
+        category_slug: ['live'],
+      });
+
+      
+
       setProducts(data);
     };
   
@@ -84,7 +88,7 @@ const App = () => {
               <Route exact path=":productID" element={<Item onAddToCart={handleAddToCart} />} />
               <Route exact path="/about"     element={<About />}   />
               <Route exact path="/terms"     element={<Terms />}   />
-              <Route exact path="/policy"    element={<Policy/>}   />
+              <Route exact path="/policy"    element={<Policy />}   />
               <Route exact path="/contact"   element={<Contact />} />
               <Route 
                 exact path="/cart" 

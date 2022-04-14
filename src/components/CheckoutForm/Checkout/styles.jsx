@@ -11,7 +11,7 @@ export default makeStyles((theme) => ({
     marginLeft: theme.spacing(2),
     marginRight: theme.spacing(2),
     [theme.breakpoints.up(600 + theme.spacing(2) * 2)]: {
-      width: 600,
+      width: '80%',
       marginLeft: 'auto',
       marginRight: 'auto',
     },
@@ -22,7 +22,7 @@ export default makeStyles((theme) => ({
     padding: theme.spacing(2),
     [theme.breakpoints.down('xs')]: {
       width: '100%',
-      marginTop: 60,
+      marginTop: 150,
     },
     [theme.breakpoints.up(600 + theme.spacing(3) * 2)]: {
       marginTop: theme.spacing(6),
@@ -48,5 +48,6 @@ export default makeStyles((theme) => ({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
+    color:'red'
   },
 }));
